@@ -1,0 +1,117 @@
+//
+//  main.cpp
+//  test0110_2
+//
+//  Created by Hui Chen Chou on 1/10/23.
+//
+
+#include <iostream>
+#include <cmath>
+#include <cstdlib>
+using namespace std;
+
+// int main(int argc, const char * argv[]) {
+    // insert code here...
+   /* int a = 1;
+    int b = 2;
+    int c = a;
+    a = b;
+    b = c;
+    std::cout << "a was 1, now a is " << a;
+    std::cout << "b was 2, now b is " << b;
+    */
+    /*
+     int x, d;
+    int sum;
+    double y;
+    std::cout << "give me an x \n";
+    std::cin >> x;
+    y = 2;
+    sum = x + y;
+    float z = x / y;
+    // d = x % y;
+    // std::cout << sum << '\n';
+    std::cout << z << '\n';
+    // std::cout << z << d << endl;
+    */
+    //double x = 10, y = 2;
+    /*
+    x = x + 1;
+    int y = x++; // x = 11, y = 10
+    int z = ++x; //x = 11, y = 11
+    std::cout << y << '\n' << z << endl;
+    */
+    /*
+    double z = (x + 10) / (3 * y);
+    std::cout << z << endl;
+    */
+    /*std::cout << "x = " << x << endl;
+    
+    std::cout << "y = " << y << endl;
+    
+    return 0;*/
+//}
+
+//int main() {
+    /* cout << "enter a value";
+    int value;
+    cin >> value;
+    cout << "your value is " << value << '\n';*/
+    /* cout << " what is the current temp in C? ";
+    int x; // x current temp
+    cin >> x;
+    double f = x *9 /5 +32;
+    cout << "It is " << f << " degree F" << '\n';*/
+    
+/*    double result = pow(2, 3);
+    cout << result << '\n';
+    return 0;*/
+//}
+
+
+/*
+int main() {
+    //...calculate a circle area with input radious.
+    double r;
+    cout << "please enter the radious valure of the circle ";
+    cin >> r ;
+    const double pi = 3.1416;
+    double area = pi * pow(r, 2);
+    cout << " the area of your circle is " << area << '\n';
+    return 0;
+}
+*/
+
+/*
+int main() {
+    srand(5);
+    int number = rand();
+    cout << number << '\n';
+    return 0;
+}
+*/
+
+int my_power(double base, int exponent) // decline and define
+{
+    
+    double result =1;
+    for(int i = 0; i < exponent; i++)
+    {
+        result = result * base;
+    }
+    return result;
+}
+
+
+int main() {
+    double a, b;
+    cout << "What is the base?" << '\n';
+    cin >> a;
+    cout << "What is the exponent?" << '\n';
+    cin >> b;
+    double power = my_power(a, b);
+    cout << power << '\n';
+    return 0;
+    
+}
+
