@@ -61,7 +61,9 @@ def init_params():
 # Use RelU as active function for the nodes, it is a function to output each elements in Z if Z > 0 and 0 if Z < = 0
 def ReLU(Z):
     return np.maximum(0, Z)
-def softmas(Z):
+
+# at the final layer of hidden layer, map all the result into the properbility (0 to 1) of each node of this layer.
+def softmax(Z):
     return np.exp(Z) / np.sum(exp(Z))
 
 #forward propagation 
