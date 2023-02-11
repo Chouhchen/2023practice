@@ -58,7 +58,7 @@ def init_params():
     b2 = np.ramdon.rand(10, 1) - 0.5
     return W1, b1, W2, b2
 
-# RelU is a function to output each elements in Z if Z > 0 and 0 if Z < = 0
+# Use RelU as active function, it is a function to output each elements in Z if Z > 0 and 0 if Z < = 0
 def ReLU(Z):
     return np.maximum(0, Z)
 def softmas(Z):
@@ -116,7 +116,7 @@ def gradient_descent(X, Y, iterations, alpha):
         Z1, A1, Z2, A2 = forward_prop(W1, b1, W2, b2, X)
         dW1, db1, dW2, db2 = back_prop(1, A1, Z2, A2, W2, X, Y)
         W1, b1, W2, b2 = update_params(W1, b1, W2, b2, dW1, db1, dW2, db2, alpha)
-        if i % 10  == 0:    # every 10 iteration, print the accuracy
+        if i % 10  == 0:    #  report the accuracy rate at every 10 iteration.
             print("Iterantion: ", i)
             print("Accuracy: ", get_accuracy(get_predictions(A2), Y))
             
@@ -150,7 +150,9 @@ def test_predictions(index, W1, b1, W2, B2):
     print("Prediction: ",prediction)
     print("Lable: ", label)
 
-current_data = current_data.reshape((28, 28)) * 255. # output data to be texted into a image file of 28 *28 with 255 pixel.
+# visualize output data to be texted into a image file of 28 *28 with 255 pixel.
+
+current_data = current_data.reshape((28, 28)) * 255. 
 plt.grey()
 plt.imshow(current_image, interpolations='nearest')
 plt.show()
