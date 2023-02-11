@@ -4,7 +4,7 @@
 # In[1]:
 
 
-print ("NN practice")
+print ("DNN practice")
 
 
 # In[2]:
@@ -48,7 +48,7 @@ X_train = data_dev[1:n]
 
 
 # intial the neural network
-# a= number of layers of the neural network 
+# a= number of layers  and number of nodes per layers of the neural network 
 # inital weights and biaess by generate raumdon output between 0 and 1, than subtract 0.5 here to get a random ooutput between -0.5 and 0.5
 
 def init_params():
@@ -58,7 +58,7 @@ def init_params():
     b2 = np.ramdon.rand(10, 1) - 0.5
     return W1, b1, W2, b2
 
-# Use RelU as active function, it is a function to output each elements in Z if Z > 0 and 0 if Z < = 0
+# Use RelU as active function for the nodes, it is a function to output each elements in Z if Z > 0 and 0 if Z < = 0
 def ReLU(Z):
     return np.maximum(0, Z)
 def softmas(Z):
