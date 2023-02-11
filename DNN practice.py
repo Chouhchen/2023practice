@@ -25,7 +25,7 @@ data= pd.read_csv ('data.csv')
 # In[5]:
 
 
-# data sets: n = number of parameters (colums), m = number of datasets (rows)
+# data sets: n = number of features (colums), m = number of datasets (rows)
 
 data = np.array(data)
 m, n = data.shape
