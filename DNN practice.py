@@ -152,7 +152,7 @@ def test_predictions(index, W1, b1, W2, B2):
 
 # visualize output data to be texted into a image file of 28 *28 with 255 pixel.
 
-current_data = current_data.reshape((28, 28)) * 255. 
+current_data = current_data.reshape(len(current_data), -1) /255
 plt.grey()
 plt.imshow(current_image, interpolations='nearest')
 plt.show()
